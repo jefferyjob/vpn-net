@@ -4,7 +4,7 @@
 > #### 相关链接
 >
 > 境外服务器：https://www.vultr.com/?ref=8214267  
-> 本站ssr脚本预览：https://raw.githubusercontent.com/mailjobblog/demo_code/main/linux/vpn/ssh.sh/ssr.sh  
+> 本站ssr脚本预览：https://raw.githubusercontent.com/jefferyjob/ShadowsocksR/main/ssr.sh
 
 > #### SSR\SS 客户端配置下载
 >
