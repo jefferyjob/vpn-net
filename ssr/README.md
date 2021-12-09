@@ -2,12 +2,12 @@
 
 SSR.sh 机场vpn搭建教程
 
-> ## 相关链接
+## 相关链接
 
 > 境外服务器：https://www.vultr.com/?ref=8214267  
 > 本站ssr脚本预览：https://raw.githubusercontent.com/jefferyjob/ShadowsocksR/main/ssr.sh
 
-> ## SSR\SS 客户端配置下载
+## SSR\SS 客户端配置下载
 
 > windows系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip  
 > Android系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk  
@@ -16,19 +16,16 @@ SSR.sh 机场vpn搭建教程
 
 ios系统：大陆下载不了。请淘宝买一个非大陆的Apple id，然后登陆搜索wingy、outline、SuperWingy、RocketWingy 等软件，你也可以直接搜ss或者ssr，会出现相关软件的。  
 
-
 ## 其他链接
 
 > 原文链接：https://viencoding.com/article/122#comment-287  
 > 原ssr脚本预览：https://github.com/luvvien/ssr-install-shellscript  
 > 其他vpn搭建方法，以及vpn提速方法：https://www.codeob.com/  
 
-
 ## 服务器购买建议
 
 - 需要购买境外服务器，例如香港或者日本，一个月大约是5美金。
-- 购买地址：https://www.vultr.com/?ref=8214267
-
+- 购买地址：https://www.vultr.com/?ref=8214267  
 
 ## 系统要求
 
@@ -43,13 +40,15 @@ ios系统：大陆下载不了。请淘宝买一个非大陆的Apple id，然后
 
 ## 开始安装
 
-### 一键安装：将以下命令复制到你已连接的服务器命令行中
+### 安装
+
+将以下命令复制到你已连接的服务器命令行中
 
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/luvvien/ssr-install-shellscript/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
-### 好了，执行上述命令之后, 我们看到以下提示:
+好了，执行上述命令之后, 我们看到以下提示:
 
 ```
 --2019-03-14 11:39:39--  https://raw.githubusercontent.com/luvvien/ssr-install-shellscript/master/ssr.sh
@@ -86,10 +85,11 @@ Last-modified header missing -- time-stamps turned off.
 请输入数字 [1-15]：
 ```
 
-这里有很多个选项，我们通常来说只关注第一个 1. 安装 ShadowsocksR，但是有的人安装后忘记账号连接信息了，或者需要更改密码等设置，这样我们就要用到其他选项了。  
-然后最下面有当前状态，如果有跟我一样显示已安装的，可以选择3. 卸载 ShadowsocksR 先卸载，然后重新执行一键安装命令，通常情况下，大家都是显示未安装状态。下面我们就从未安装转台开始：
+这里有很多个选项，我们通常来说只关注第一个 1. 安装 ShadowsocksR，但是有的人安装后忘记账号连接信息了，或者需要更改密码等设置，这样我们就要用到其他选项了。   
+然后最下面有当前状态，如果有跟我一样显示已安装的，可以选择3. 卸载 ShadowsocksR 先卸载，然后重新执行一键安装命令，通常情况下，大家都是显示未安装状态。下面我们就从未安装状态开始。
 
-### 1.输入1开始安装
+### 输入1开始安装
+
 提示信息：
 
 ```
@@ -196,7 +196,7 @@ outline搭建vpn教程：/article/93
 
 ### 服务器管理以及配置
 
-#### 1、如何配置多个账号
+#### 如何配置多个账号
 
 ```
 注意：添加成功后，要去服务器开放添加的这个端口，参见上文中提到的【Vultr端口开放指南】方法
@@ -254,7 +254,7 @@ root@vultr:/usr/local/src# bash ssr.sh
 > service iptablesstopchkconfig iptablesoff
 ```
 
-#### 2、linux管理ssr日常命令
+#### Linux管理ssr日常命令
 
 ```
 启动：
