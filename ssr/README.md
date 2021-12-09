@@ -1,31 +1,35 @@
-# SSR.sh 搭建SSR/SS服务端教程
+# SSR/SS搭建
 
+SSR.sh 机场vpn搭建教程
 
-> #### 相关链接
->
+> ## 相关链接
+
 > 境外服务器：https://www.vultr.com/?ref=8214267  
 > 本站ssr脚本预览：https://raw.githubusercontent.com/jefferyjob/ShadowsocksR/main/ssr.sh
 
-> #### SSR\SS 客户端配置下载
->
+> ## SSR\SS 客户端配置下载
+
 > windows系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip  
 > Android系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk  
 > Mac系统 ssr下载地址：https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.3-R8-build3/ShadowsocksX-NG-R8.dmg  
 > windows、Mac系统 ss下载地址：https://www.sednax.com/  
-> ios系统：大陆下载不了。请淘宝买一个非大陆的Apple id，然后登陆搜索wingy、outline、SuperWingy、RocketWingy 等软件，你也可以直接搜ss或者ssr，会出现相关软件的。  
->
 
-> #### 其他链接
->
+ios系统：大陆下载不了。请淘宝买一个非大陆的Apple id，然后登陆搜索wingy、outline、SuperWingy、RocketWingy 等软件，你也可以直接搜ss或者ssr，会出现相关软件的。  
+
+
+## 其他链接
+
 > 原文链接：https://viencoding.com/article/122#comment-287  
 > 原ssr脚本预览：https://github.com/luvvien/ssr-install-shellscript  
-> 其他vpn搭建方法，以及vpn提速方法：https://www.codeob.com/
+> 其他vpn搭建方法，以及vpn提速方法：https://www.codeob.com/  
 
 
-## 服务器地址要求
+## 服务器购买建议
 
 - 需要购买境外服务器，例如香港或者日本，一个月大约是5美金。
 - 购买地址：https://www.vultr.com/?ref=8214267
+
+
 ## 系统要求
 
 - CentOS 6+ 或者 Debian 6+ 或者 Ubuntu 14.04+（包含最新的ubuntu18、ubuntu19） 
@@ -34,21 +38,18 @@
 
 ## 安装前
 
-```
-安装前先检查服务器是否有安装gcc编译器和wget下载软件
-
-如果提示找不到 wget 的，请执行 apt-get install -y wget（debian/ubuntu系统可用）安装，没提示错误就不用管了
-```
+安装前先检查服务器是否有安装gcc编译器和wget下载软件  
+如果提示找不到 wget 的，请执行 apt-get install -y wget（debian/ubuntu系统可用）安装，没提示错误就不用管了  
 
 ## 开始安装
 
-#### 一键安装：将以下命令复制到你已连接的服务器命令行中
+### 一键安装：将以下命令复制到你已连接的服务器命令行中
 
 ```
 wget -N --no-check-certificate https://raw.githubusercontent.com/luvvien/ssr-install-shellscript/master/ssr.sh && chmod +x ssr.sh && bash ssr.sh
 ```
 
-#### 好了，执行上述命令之后, 我们看到以下提示:
+### 好了，执行上述命令之后, 我们看到以下提示:
 
 ```
 --2019-03-14 11:39:39--  https://raw.githubusercontent.com/luvvien/ssr-install-shellscript/master/ssr.sh
@@ -88,7 +89,7 @@ Last-modified header missing -- time-stamps turned off.
 这里有很多个选项，我们通常来说只关注第一个 1. 安装 ShadowsocksR，但是有的人安装后忘记账号连接信息了，或者需要更改密码等设置，这样我们就要用到其他选项了。  
 然后最下面有当前状态，如果有跟我一样显示已安装的，可以选择3. 卸载 ShadowsocksR 先卸载，然后重新执行一键安装命令，通常情况下，大家都是显示未安装状态。下面我们就从未安装转台开始：
 
-#### 1.输入1开始安装
+### 1.输入1开始安装
 提示信息：
 
 ```
@@ -99,28 +100,27 @@ Last-modified header missing -- time-stamps turned off.
 
 注：小白的话就不要输入端口了，就用默认2333就好了，专业人士可以选择自己喜欢的端口。
 
-> ###### 这个 `2333` 端口是需要开启的
->
-> 据我的文章购买vultr服务器的，可以参照下文，将`2333`端口（或者你自定义的端口）  
->
-> ###### Vultr端口开放指南（可以跳过端口开放设置，默认开放全部端口）
->
-> 添加一个组，点下图中蓝色的按钮，然后随便起个名字，我就叫`vpn`了。
-> 
->![](http://img.github.mailjob.net/jefferyjob.github.io/20210123133141.png)
-> 
->之后呢，我们就开始添加端口了，首先点一次右侧的`+`，下面会自动添加两条新纪录，然后修改红框框的内容，第一个选择`TCP`，第二个填写`2333`(或者你自定义的端口，但是要跟之前安装ss、ssr服务时设置的对应)，然后再点右侧的加号，最后会有三条记录，就像下面的图一样
-> 
->![](http://img.github.mailjob.net/jefferyjob.github.io/20210123133207.png)
-> 最后，在instance列表，找到你的instance，点开查看详情，然后将你instance与刚刚设置的组绑定。
->
-> ![](http://img.github.mailjob.net/jefferyjob.github.io/20210123133219.png)
->
-> 选择刚刚那个vpn的组，然后点蓝色的按钮就好了。
+#### 如何开启 2333 端口？
 
+据我的文章购买vultr服务器的，可以参照下文，将`2333`端口（或者你自定义的端口）  
 
+Vultr端口开放指南（可以跳过端口开放设置，默认开放全部端口）
 
-#### 2.好了，我们继续！按回车键进入下一步：
+添加一个组，点下图中蓝色的按钮，然后随便起个名字，我就叫`vpn`了。
+
+![](./static/1.png)
+
+之后呢，我们就开始添加端口了，首先点一次右侧的`+`，下面会自动添加两条新纪录，然后修改红框框的内容，第一个选择`TCP`，第二个填写`2333`(或者你自定义的端口，但是要跟之前安装ss、ssr服务时设置的对应)，然后再点右侧的加号，最后会有三条记录，就像下面的图一样
+
+![](./static/2.png)
+
+最后，在instance列表，找到你的instance，点开查看详情，然后将你instance与刚刚设置的组绑定。2
+
+![](./static/3.png)
+
+选择刚刚那个vpn的组，然后点蓝色的按钮就好了。
+
+### 2.好了，我们继续！按回车键进入下一步：
 
 提示信息：
 
@@ -134,11 +134,11 @@ Last-modified header missing -- time-stamps turned off.
 
 这里你得设置一个密码，这个可以别默认了，你要非要用我的博客地址做密码也没人拦你。输入密码后，回车进入下一步。
 
-#### 3.无论遇到什么都回车
+### 3.无论遇到什么都回车
 
 我们先不粘贴提示信息了，因为下面的每一步，你都不需要更改，`全部回车`即可。（专业人士可以自行选择，自行操作）
 
-#### 4.安装完成
+### 4.安装完成
 
 屏幕自己滚够了之后，提示如下信息：
 
@@ -173,27 +173,28 @@ outline搭建vpn教程：/article/93
 
 ## 如何使用？
 
-**1、下载ssr客户端**
+### 下载ssr客户端
 
-**2、配置客户端并连接**
+### 配置客户端并连接
 
-***<a、有的客户端支持链接方式，复制粘贴就好，也就是类似于这个`ss://YWVzLTEyOC1jd` 或者` ssr://MTQ5LjI4LjE0Ni4xND` 当然，要区分你连的ss还是ssr***
+1、有的客户端支持链接方式，复制粘贴就好，也就是类似于这个`ss://YWVzLTEyOC1jd` 或者` ssr://MTQ5LjI4LjE0Ni4xND` 当然，要区分你连的ss还是ssr  
 
-***<b、有的客户端支持二维码方式，那就复制提示信息里面的二维码链接到浏览器，我的博客会替你生成二维码，以Mac电脑上的ss为例：
-复制`/qrcode?base64=ss://YWVzLTEyOC1j`到浏览器：***
+2、有的客户端支持二维码方式，那就复制提示信息里面的二维码链接到浏览器，我的博客会替你生成二维码，以Mac电脑上的ss为例：
+复制`/qrcode?base64=ss://YWVzLTEyOC1j`到浏览器
 
-***<c、好吧，如果你的客户端很笨，上面的都不支持，那只能原始的手动填入信息了，还记得上面让你保留的信息吗？都在那里！***
+3、好吧，如果你的客户端很笨，上面的都不支持，那只能原始的手动填入信息了，还记得上面让你保留的信息吗？都在那里！
 
-**这是 SSR 的配置（win + mac）：**
+#### 这是 SSR 的配置（win + mac）
 
-<img src="http://img.github.mailjob.net/jefferyjob.github.io/20210123173717.png" style="zoom: 30%;" />
-<img src="http://img.github.mailjob.net/jefferyjob.github.io/20210123133238.png" style="zoom: 30%;" />
+![](./static/4.png)
 
-**SS的配置：**
+![](./static/5.png)
 
-<img src="http://img.github.mailjob.net/jefferyjob.github.io/20210123133301.png" style="zoom:30%;" />
+#### SS的配置
 
-## 服务器管理以及配置
+![](./static/6.png)
+
+### 服务器管理以及配置
 
 #### 1、如何配置多个账号
 

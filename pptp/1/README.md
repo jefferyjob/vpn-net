@@ -16,7 +16,7 @@
 ### 脚本下载
 
 ```bash
-wget https://raw.github.com/viljoviitanen/setup-simple-pptp-vpn/master/setup.sh
+wget https://raw.githubusercontent.com/jefferyjob/vpn-setup/bd0f3fd5b5806ca32d7c5708a08368939b4786a5/pptp/1/pptp.sh?token=AF4V32Z54MHXGPRUVXM5RKDBWHQTW
 ```
 
 ### 进行安装
