@@ -1,44 +1,33 @@
-# SSR/SS搭建
-
-SSR.sh 机场vpn搭建教程
+# SSR/SS 机场VPN搭建教程
 
 ## 相关链接
 
-> 境外服务器：https://www.vultr.com/?ref=8214267  
-> 本站ssr脚本预览：https://raw.githubusercontent.com/jefferyjob/ShadowsocksR/main/ssr.sh
+- 境外服务器：https://www.vultr.com/?ref=8214267  
+- 原文链接：https://viencoding.com/article/122#comment-287  
+- 原ssr脚本预览：https://github.com/luvvien/ssr-install-shellscript  
+- 其他vpn搭建方法，以及vpn提速方法：https://www.codeob.com/  
 
-## SSR\SS 客户端配置下载
+## SSR\SS 客户端下载
 
-> windows系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip  
-> Android系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk  
-> Mac系统 ssr下载地址：https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.3-R8-build3/ShadowsocksX-NG-R8.dmg  
-> windows、Mac系统 ss下载地址：https://www.sednax.com/  
+- windows系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip  
+- Android系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk  
+- Mac系统 ssr下载地址：https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.3-R8-build3/ShadowsocksX-NG-R8.dmg  
+- windows、Mac系统 ss下载地址：https://www.sednax.com/  
 
 ios系统：大陆下载不了。请淘宝买一个非大陆的Apple id，然后登陆搜索wingy、outline、SuperWingy、RocketWingy 等软件，你也可以直接搜ss或者ssr，会出现相关软件的。  
-
-## 其他链接
-
-> 原文链接：https://viencoding.com/article/122#comment-287  
-> 原ssr脚本预览：https://github.com/luvvien/ssr-install-shellscript  
-> 其他vpn搭建方法，以及vpn提速方法：https://www.codeob.com/  
-
-## 服务器购买建议
-
-- 需要购买境外服务器，例如香港或者日本，一个月大约是5美金。
-- 购买地址：https://www.vultr.com/?ref=8214267  
 
 ## 系统要求
 
 - CentOS 6+ 或者 Debian 6+ 或者 Ubuntu 14.04+（包含最新的ubuntu18、ubuntu19） 
 - 注: 我们通常使用ubuntu16或者18
-- 下文将以 `ubuntu18` 为例
+- 本文将以 `ubuntu18` 为例
 
 ## 安装前
 
 安装前先检查服务器是否有安装gcc编译器和wget下载软件  
-如果提示找不到 wget 的，请执行 apt-get install -y wget（debian/ubuntu系统可用）安装，没提示错误就不用管了  
+如果提示找不到 wget 的，请执行 `apt-get install -y wget`（debian/ubuntu系统可用）安装，没提示错误就不用管了  
 
-## 开始安装
+## 安装步骤演示
 
 ### 安装
 
