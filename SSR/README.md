@@ -9,9 +9,9 @@
 
 ## SSR\SS 客户端下载
 
-- windows系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-csharp/releases/download/4.9.0/ShadowsocksR-win-4.9.0.zip  
-- Android系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-android/releases/download/3.5.4/shadowsocksr-android-3.5.4.apk  
-- Mac系统 ssr下载地址：https://github.com/qinyuhang/ShadowsocksX-NG-R/releases/download/1.4.3-R8-build3/ShadowsocksX-NG-R8.dmg  
+- windows系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-csharp/releases 
+- Android系统 ssr下载地址：https://github.com/shadowsocksrr/shadowsocksr-android/releases 
+- Mac系统 ssr下载地址：https://github.com/qinyuhang/ShadowsocksX-NG-R/releases
 - windows、Mac系统 ss下载地址：https://www.sednax.com/  
 
 ios系统：大陆下载不了。请淘宝买一个非大陆的Apple id，然后登陆搜索wingy、outline、SuperWingy、RocketWingy 等软件，你也可以直接搜ss或者ssr，会出现相关软件的。  
