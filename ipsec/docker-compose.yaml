@@ -1,0 +1,25 @@
+version: "3"
+services:
+  mysql:
+    image: hwdsl2/ipsec-vpn-server
+    container_name: ipsec-vpn-server
+    ports:
+      - "500:500/udp"
+      - "4500:4500/udp"
+    volumes:
+      - "ikev2-vpn-data:/etc/ipsec.d"
+      - "/lib/modules:/lib/modules:ro"
+    privileged: true
+    environment:
+      VPN_IPSEC_PSK: "root_secret"
+      VPN_USER: "root_secret"
+      VPN_PASSWORD: "root_secret"
+    restart: always
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
