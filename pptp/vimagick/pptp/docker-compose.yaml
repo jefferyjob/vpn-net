@@ -5,7 +5,7 @@ services:
     ports:
       - "1723:1723"
     environment:
-      - SERVER=1.2.3.4 # 你服务器的公网IP
+      - SERVER=54.92.87.72 # 服务器的公网IP
       - TUNNEL=vps # VPN名称
       - USERNAME=username # 用户名
       - PASSWORD=password # 密码
