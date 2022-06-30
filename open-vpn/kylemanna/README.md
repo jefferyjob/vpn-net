@@ -1,6 +1,6 @@
 # Docker 部署 OpenVPN
 
-
+该 docker-compose 基于 kylemanna/docker-openvpn 编写，由于官方的
 
 ## 搭建步骤
 
@@ -53,3 +53,6 @@ docker-compose run --rm openvpn easyrsa gen-crl update-db
 docker-compose restart
 ```
 
+## 参考资料
+
+- https://github.com/kylemanna/docker-openvpn
