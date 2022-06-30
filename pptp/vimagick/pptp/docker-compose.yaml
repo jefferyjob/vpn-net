@@ -1,0 +1,12 @@
+version: "3"
+services:
+  pptp:
+    image: vimagick/pptp
+    environment:
+      - SERVER=1.2.3.4 # 你服务器的公网IP
+      - TUNNEL=vps
+      - USERNAME=username
+      - PASSWORD=password
+    privileged: true
+    restart: unless-stopped
+    network_mode: "host"

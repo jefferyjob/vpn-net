@@ -1,0 +1,12 @@
+version: "3"
+services:
+  pptp:
+    image: mobtitude/vpn-pptp
+    container_name: pptp-vpn
+    ports:
+      - "1723:1723"
+    volumes:
+      - ./data/chap-secrets:/etc/ppp/chap-secrets
+    privileged: true
+    restart: always
+    network_mode: "host"

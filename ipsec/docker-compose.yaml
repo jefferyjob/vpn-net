@@ -1,6 +1,6 @@
 version: "3"
 services:
-  mysql:
+  ipsec-vpn:
     image: hwdsl2/ipsec-vpn-server
     container_name: ipsec-vpn-server
     ports:

@@ -1,0 +1,18 @@
+version: "3"
+services:
+  pptpd:
+    image: vimagick/pptpd
+    volumes:
+      - ./data/pptpd.conf:/etc/pptpd.conf
+      - ./data/pptpd-options:/etc/ppp/pptpd-options
+      - ./data/chap-secrets:/etc/ppp/chap-secrets
+    privileged: true
+    restart: always
+    networks:
+      - pptpd-net
+
+networks:
+  pptpd-net:
+    driver: bridge
+    ipam:
+      driver: default

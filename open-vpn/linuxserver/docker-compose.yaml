@@ -1,0 +1,20 @@
+version: "3"
+services:
+  openvpn-as:
+    image: linuxserver/openvpn-as # 或 ghcr.io/linuxserver/openvpn-as
+    container_name: openvpn-as
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+      - INTERFACE=eth0 #optional
+    volumes:
+      - ./data/config:/config
+      - ./data/cmd:/cmd
+    ports:
+      - "943:943" # 后台管理GUI端口
+      - "9443:9443" # TCP端口
+      - "1194:1194/udp" # UDP端口
+    restart: unless-stopped
