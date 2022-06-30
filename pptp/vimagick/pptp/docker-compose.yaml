@@ -2,11 +2,14 @@ version: "3"
 services:
   pptp:
     image: vimagick/pptp
+    ports:
+      - "1723:1723"
     environment:
       - SERVER=1.2.3.4 # 你服务器的公网IP
-      - TUNNEL=vps
-      - USERNAME=username
-      - PASSWORD=password
+      - TUNNEL=vps # VPN名称
+      - USERNAME=username # 用户名
+      - PASSWORD=password # 密码
     privileged: true
     restart: unless-stopped
+#    restart: always
     network_mode: "host"

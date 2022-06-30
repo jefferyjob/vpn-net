@@ -1,6 +1,6 @@
-# Docker 部署 OpenVPN
+# Docker部署OpenVPN
 
-该 docker-compose 基于 kylemanna/docker-openvpn 编写，由于官方的
+该 docker-compose 基于 kylemanna/docker-openvpn 编写，由于官方的镜像搭建起来较为繁琐，在docker镜像中，该镜像属于高Star镜像，操作方便，所以推荐使用该方式搭建OpenVPN服务器
 
 ## 搭建步骤
 

@@ -1,9 +1,9 @@
-# OpenVPN 官方docker镜像
+# OpenVPN官方Docker镜像
 
-该 docker 镜像是 openvpn 官方发布的镜像
+该镜像是OpenVPN官方发布的Docker镜像，由于搭建步骤比较繁琐，所以**不推荐**使用该镜像搭建 OpenVPN 服务。
 
-但是添加用户没有给出便捷的操作脚本。
+## 搭建步骤
 
-后台在网上找到了一些shell
-
-但是需要安装 easy-rsa 证书生成软件
+- 启动docker容器
+- 在容器内安装easy-rsa软件，用于生成CA证书
+- 运行data/cmd中的脚本，用于添加用户删除用户
