@@ -2,8 +2,8 @@
 
 ## pptpd.conf
 ```text
-localip  服务器内网IP（例：192.168.9.1）
-remoteip VPN分配的网段（例：192.168.9.100-150）
+localip 192.168.0.1                             #VPN服务器的虚拟ip
+remoteip 192.168.0.200-238,192.168.0.245        #分配给VPN客户端的虚拟ip
 ```
 
 ## pptpd-options
