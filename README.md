@@ -23,15 +23,15 @@
 此推荐等级的排序，根据服务搭建难易程度、稳定性、客户端配置难易程度，笔者主观看法进行排序。
 
 **☆☆☆☆☆**
-- OpenVpn
-- IPsec
+- [OpenVpn](open-vpn)
+- [IPsec](ipsec)
 
 **☆☆☆**
-- pptp
-- ssr
+- [pptp](pptp)
+- [ssr](ssr)
 
 **☆**
-- WireGuard
+- [WireGuard](wire-guard)
 
 ## 免责声明
 
