@@ -51,35 +51,52 @@ https://vpnsetup.net/clients2
 ```
 </details>
 
-
-
 ## 连接步骤演示
 
 提供两种方式连接VPN，分别为L2TP/IPSec和IKEv2，你可以任选其一连接。
 
 ### L2TP/IPSec
 
-右键单击系统托盘中的无线/网络图标。
-选择 打开"网络和 Internet"设置，然后在打开的页面中单击 网络和共享中心。
-单击 设置新的连接或网络。
-选择 连接到工作区，然后单击 下一步。
-单击 使用我的Internet连接 (VPN)。
-在 Internet地址 字段中输入你的 VPN 服务器 IP。
-在 目标名称 字段中输入任意内容。单击 创建。
-返回 网络和共享中心。单击左侧的 更改适配器设置。
-右键单击新创建的 VPN 连接，并选择 属性。
-单击 安全 选项卡，从 VPN 类型 下拉菜单中选择 "使用 IPsec 的第 2 层隧道协议 (L2TP/IPSec)"。
-单击 允许使用这些协议。选中 "质询握手身份验证协议 (CHAP)" 和 "Microsoft CHAP 版本 2 (MS-CHAP v2)" 复选框。
-单击 高级设置 按钮。
-单击 使用预共享密钥作身份验证 并在 密钥 字段中输入你的 VPN IPsec PSK。
-单击 确定 关闭 高级设置。
-单击 确定 保存 VPN 连接的详细信息。
+单击系统托盘中的无线/网络图标。
+
+![img.png](assets/windows/1.1.png)
+
+点击 VPN，点击添加VPN。  
+VPN服务商：选择Windows(内置)。  
+连接名称：没有要求，你可以随便起一个名字。  
+服务器名称或地址：填写VPN服务器的IP。  
+VPN类型：使用预共享密钥的L2TP/IPsec。  
+预共享密钥：填写VPN的IPsec PSK。  
+登录信息的类型：用户名和密码。  
+用户名：填写VPN的账号。  
+密码：填写VPN的密码。  
+
+![img_12.png](assets/windows/1.2.png)
+
+单击系统托盘中的无线/网络图标，连接VPN。
+
+![img_13.png](assets/windows/1.3.png)
+
+查看是否连接成功。
+
+![img_14.png](assets/windows/1.4.png)
 
 ### IKEv2
 
-Windows 8, 10 和 11 用户可以自动导入 IKEv2 配置
+Windows 8, 10 和 11 用户可以自动导入 IKEv2 配置  
+  
+将生成的 .p12 文件安全地传送到你的计算机。  
+右键单击 [ikev2_config_import.cmd](assets/windows.cmd/ikev2_config_import.cmd) 并保存这个辅助脚本到与 .p12 文件 相同的文件夹。  
+右键单击cmd脚本，选择 属性。单击对话框下方的 解除锁定，然后单击 确定。  
+右键单击cmd脚本，选择 以管理员身份运行 并按提示操作。  
+在整个配置过程中，在提示 `VPN server address:` 的时候，需要你输入VPN服务器的IP地址，其他的都是回车，使用默认配置即可。  
 
-将生成的 .p12 文件安全地传送到你的计算机。
-右键单击 [ikev2_config_import.cmd](assets/windows/ikev2_config_import.cmd) 并保存这个辅助脚本到与 .p12 文件 相同的文件夹。
-右键单击保存的脚本，选择 属性。单击对话框下方的 解除锁定，然后单击 确定。
-右键单击保存的脚本，选择 以管理员身份运行 并按提示操作。
+![img.png](assets/windows/2.0.png)
+
+单击系统托盘中的无线/网络图标，连接VPN。
+
+![img.png](assets/windows/2.1.png)
+
+查看是否连接成功。
+
+![img_1.png](assets/windows/2.2.png)
