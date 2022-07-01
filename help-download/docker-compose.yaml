@@ -4,17 +4,8 @@ services:
     image: nginx
     container_name: nginx
     ports:
-      - "80:80"
+      - "8081:80"
     volumes:
       - ../:/usr/share/nginx/html
       - ./data/conf.d:/etc/nginx/conf.d
-    privileged: true
-    restart: always
-    networks:
-      - nginx-net
-
-networks:
-  nginx-net:
-    driver: bridge
-    ipam:
-      driver: default
+    network_mode: "bridge"

@@ -15,11 +15,4 @@ services:
       VPN_USER: "user123456"
       VPN_PASSWORD: "pwd123456"
     restart: always
-    networks:
-      - ipsec-net
-
-networks:
-  ipsec-net:
-    driver: bridge
-    ipam:
-      driver: default
+    network_mode: "bridge"

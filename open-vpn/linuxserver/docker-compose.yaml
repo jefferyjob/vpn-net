@@ -1,7 +1,7 @@
 version: "3"
 services:
   openvpn-as:
-    image: linuxserver/openvpn-as # 或 ghcr.io/linuxserver/openvpn-as
+    image: ghcr.io/linuxserver/openvpn-as # 或 linuxserver/openvpn-as
     container_name: openvpn-as
     cap_add:
       - NET_ADMIN
