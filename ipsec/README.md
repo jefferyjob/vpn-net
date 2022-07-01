@@ -12,6 +12,53 @@
 docker compose up -d
 ```
 
+```bash
+docker logs ipsec-vpn-server
+```
+
+```text
+Trying to auto discover IP of this server...
+
+Starting IPsec service...
+
+================================================
+
+IPsec VPN server is now ready for use!
+
+Connect to your new VPN with these details:
+
+Server IP: 54.92.87.72
+IPsec PSK: vpn_user_psk
+Username: vpn_user
+Password: vpn_user_pwd
+
+Write these down. You'll need them to connect!
+
+VPN client setup: https://vpnsetup.net/clients2
+
+================================================
+
+Setting up IKEv2. This may take a few moments...
+
+================================================
+
+IKEv2 setup successful. Details for IKEv2 mode:
+
+VPN server address: 54.92.87.72
+VPN client name: vpnclient
+
+Client configuration is available inside the
+Docker container at:
+/etc/ipsec.d/vpnclient.p12 (for Windows & Linux)
+/etc/ipsec.d/vpnclient.sswan (for Android)
+/etc/ipsec.d/vpnclient.mobileconfig (for iOS & macOS)
+
+Next steps: Configure IKEv2 clients. See:
+https://vpnsetup.net/clients2
+
+================================================
+```
+
 ## IPsec VPN 介绍
 ### 支持协议
 - IPsec/L2TP
