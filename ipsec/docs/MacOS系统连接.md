@@ -53,13 +53,17 @@ https://vpnsetup.net/clients2
 
 打开系统偏好设置并转到网络部分。
 ![img.png](assets/mac/2.2.png)
+
 在窗口左下角单击 + 按钮。
 ![img.png](assets/mac/2.3.png)
+
 从 接口 下拉菜单选择 VPN。 从 VPN类型 下拉菜单选择 IPSec 上的 L2TP。 在 服务名称 字段中输入任意内容。 单击 创建。
 ![img.png](assets/mac/1.3.png)
+
 在 服务器地址 字段中输入你的 VPN 服务器 IP。
 在 帐户名称 字段中输入你的 VPN 用户名。
 ![img.png](assets/mac/1.4.png)
+
 单击 认证设置 按钮。
 在 用户认证 部分，选择 密码 单选按钮，然后输入你的 VPN 密码。
 在 机器认证 部分，选择 共享的密钥 单选按钮，然后输入你的 VPN IPsec PSK。
