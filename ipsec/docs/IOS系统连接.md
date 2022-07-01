@@ -60,6 +60,6 @@ https://vpnsetup.net/clients2
 在 密钥 字段中输入你的 VPN IPsec PSK。  
 启用 发送所有流量 选项。  
 单击右上角的 完成。  
-![](assets/ios/1.2.jpg)
+![](assets/ios/1.2.png)
 启用 VPN 连接。  
-![](assets/ios/1.3.jpg)
+![](assets/ios/1.3.PNG)
