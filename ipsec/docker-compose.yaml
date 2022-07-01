@@ -7,13 +7,13 @@ services:
       - "500:500/udp"
       - "4500:4500/udp"
     volumes:
-      - ./ikev2-vpn-data:/etc/ipsec.d
+      - ./ipsec.d:/etc/ipsec.d
       - ./lib/modules:/lib/modules:ro
     privileged: true
     environment:
-      VPN_IPSEC_PSK: "vpn_user_psk"
-      VPN_USER: "vpn_user"
-      VPN_PASSWORD: "vpn_user_pwd"
+      VPN_IPSEC_PSK: "psk123456"
+      VPN_USER: "user123456"
+      VPN_PASSWORD: "pwd123456"
     restart: always
     networks:
       - ipsec-net
