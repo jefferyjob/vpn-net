@@ -1,4 +1,4 @@
-# 客户端连接OpenVPN
+# OpenVPN客户端连接VPN
 
 当你的设备安装好 [OpenVPN](https://openvpn.net/vpn-client) 软件后，只需要两步，即可快速连接VPN。
 
