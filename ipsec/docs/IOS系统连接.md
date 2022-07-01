@@ -51,6 +51,7 @@ https://vpnsetup.net/clients2
 
 进入设置 -> 通用 -> VPN。  
 ![](assets/ios/1.1.jpg)
+
 单击 添加VPN配置。  
 单击 类型 。选择 L2TP 并返回。  
 在 描述 字段中输入任意内容。  
@@ -61,5 +62,6 @@ https://vpnsetup.net/clients2
 启用 发送所有流量 选项。  
 单击右上角的 完成。  
 ![](assets/ios/1.2.png)
+
 启用 VPN 连接。  
 ![](assets/ios/1.3.PNG)
