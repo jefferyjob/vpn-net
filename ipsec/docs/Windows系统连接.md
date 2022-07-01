@@ -4,6 +4,7 @@
 
 <details>
 <summary>展开查看</summary>
+<pre><code>
 ```text
 Trying to auto discover IP of this server...
 
@@ -46,6 +47,7 @@ https://vpnsetup.net/clients2
 
 ================================================
 ```
+</code></pre>
 </details>
 
 
