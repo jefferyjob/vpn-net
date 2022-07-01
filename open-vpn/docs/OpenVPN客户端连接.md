@@ -6,6 +6,7 @@
 
 - 官网下载：https://openvpn.net/vpn-client
 - 百度云下载(推荐)：https://pan.baidu.com/s/1XTuy_Tpe2C2LS6T9Bolrmg?pwd=qr7p
+- Gitee下载：https://gitee.com/code_soft/science-net/tree/master/open-x
 
 ## 连接步骤演示
 
