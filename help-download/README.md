@@ -23,6 +23,6 @@ chmod -R 777 ../*
 ### 访问
 server ip 是你服务器的公网IP
 ```text
-http://<server ip>:80
+http://<server ip>
 ```
 你可以通过此网址下载所需要的文件
