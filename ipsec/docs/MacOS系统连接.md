@@ -2,6 +2,11 @@
 
 ## 生成的VPN账号示例
 
+<details>
+<summary>
+点击展开查看
+</summary>
+
 ```text
 Trying to auto discover IP of this server...
 
@@ -44,6 +49,8 @@ https://vpnsetup.net/clients2
 
 ================================================
 ```
+
+</details>
 
 ## 连接VPN
 

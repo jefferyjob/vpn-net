@@ -16,6 +16,11 @@ docker compose up -d
 docker logs ipsec-vpn-server
 ```
 
+<details>
+<summary>
+点击展开查看
+</summary>
+
 ```text
 Trying to auto discover IP of this server...
 
@@ -58,6 +63,8 @@ https://vpnsetup.net/clients2
 
 ================================================
 ```
+
+</details>
 
 ## IPsec VPN 介绍
 ### 支持协议
