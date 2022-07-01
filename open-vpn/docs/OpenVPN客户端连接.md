@@ -2,6 +2,11 @@
 
 当你的设备安装好 [OpenVPN](https://openvpn.net/vpn-client) 软件后，只需要两步，即可快速连接VPN。
 
+## 下载OpenVPN客户端
+
+- 官网下载：https://openvpn.net/vpn-client
+- 百度云下载(推荐)：https://pan.baidu.com/s/1ilD1jkiNLhHMA-C762g9dQ?pwd=9gek
+
 ## 连接步骤
 
 打开 OpenVPN 软件，选择 `FILE`，然后点击 `BROWSE` 浏览文件，导入 `xxx.ovpn` 文件。
