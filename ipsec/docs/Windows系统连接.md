@@ -53,7 +53,7 @@ https://vpnsetup.net/clients2
 
 
 
-## 连接VPN
+## 连接步骤演示
 
 提供两种方式连接VPN，分别为L2TP/IPSec和IKEv2，你可以任选其一连接。
 

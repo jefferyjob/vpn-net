@@ -1,14 +1,25 @@
-## 配置网络转发
+# Docker搭建pptpd服务器
 
-### 设置ipv4转发
+## 搭建步骤
+
+### 开放端口
+- 1723/tcp
+
+### 启动pptpd
+```bash
+docker-compose up -d
+```
+
+### 配置网络转发
+
+#### 设置ipv4转发
 还要让系统允许 IP forward, 编辑 /etc/sysctl.conf 这个文件, 确保有这一行:
 ```bash
 net.ipv4.ip_forward = 1
 ```
 然后, 运行 `sysctl -p`
 
-### 设置iptables NAT转发
-
+#### 设置iptables NAT转发
 ```bash
 #注意这里eth0代表你的外网网卡，请用ifconfig查看或者咨询网络管理员
 #如果不懂网卡知识，建议去了解一下，又不难
@@ -24,8 +35,7 @@ sudo iptables -t nat -A POSTROUTING -s 192.168.0.0/24 -o eth0 -j SNAT --to-sourc
 sudo iptables -I FORWARD -s 192.168.0.0/24 -p tcp --syn -i ppp+ -j TCPMSS --set-mss 1300
 ```
 
-### 检查VPN服务器的连接情况
-
+#### 检查VPN服务器的连接情况
 ```bash
 ps -aux | grep pptpd
  

@@ -8,15 +8,4 @@ services:
       - ./data/chap-secrets:/etc/ppp/chap-secrets
     privileged: true
     restart: always
-#    restart: always
     network_mode: "host"
-#    ports:
-#      - "1723:1723"
-#    networks:
-#      - pptpd-net
-#
-#networks:
-#  pptpd-net:
-#    driver: bridge
-#    ipam:
-#      driver: default
