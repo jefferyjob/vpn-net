@@ -1,0 +1,24 @@
+version: "3"
+services:
+
+  clash:
+    image: dreamacro/clash
+    restart: always
+    volumes:
+      - ./config/config.yaml:/root/.config/clash/config.yaml
+    container_name: clash
+    ports:
+      - "7889:7889" # mixed-port
+      - "7890:7890" # http代理端口
+      - "7891:7891" # sock5代理端口
+      - "9090:9090" # REST API端口
+
+  clash_web:
+    image: haishanh/yacd
+    container_name: clash_web
+    restart: always
+    depends_on:
+      # 依赖于上面的clash服务，在clash启动后，web才启动
+      - clash
+    ports:
+      - "8090:80" # 容器外 web 访问端口
