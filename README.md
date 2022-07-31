@@ -23,8 +23,8 @@
 此推荐等级的排序，根据服务搭建难易程度、稳定性、客户端配置难易程度，笔者主观看法进行排序。
 
 **☆☆☆☆☆**
-- [OpenVpn](open-vpn)
 - [IPsec](ipsec)
+- [OpenVpn](open-vpn)
 
 **☆☆☆**
 - [pptp](pptp)
