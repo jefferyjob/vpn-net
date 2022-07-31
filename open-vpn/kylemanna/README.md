@@ -10,13 +10,13 @@
 
 ### 配置OpenVPN容器
 ```bash
-docker-compose run --rm  openvpn ovpn_genconfig -u udp://<ip address>
+docker compose run --rm  openvpn ovpn_genconfig -u udp://<ip address>
 ```
 后面的IP地址，请写入你服务器的公网IP地址
 
 ### 初始化
 ```bash
-docker-compose run --rm openvpn ovpn_initpki
+docker compose run --rm openvpn ovpn_initpki
 ```
 初始化过程说明
 ```text
@@ -33,7 +33,7 @@ docker-compose up -d
 
 ### 创建用户jack客户端文件
 ```bash
-docker-compose run --rm openvpn easyrsa build-client-full jack nopass
+docker compose run --rm openvpn easyrsa build-client-full jack nopass
 ```
 输入密码过程说明
 ```text
@@ -42,14 +42,14 @@ Enter pass phrase for /etc/openvpn/pki/private/ca.key(输入刚才设置的私�
 
 ### 导出.ovpn文件到本地
 ```bash
-docker-compose run --rm openvpn ovpn_getclient jack > ./jack.ovpn
+docker compose run --rm openvpn ovpn_getclient jack > ./jack.ovpn
 ```
 
 ### 删除用户jack
 ```bash
-docker-compose run --rm openvpn easyrsa revoke jack
-docker-compose run --rm openvpn easyrsa gen-crl update-db
-docker-compose restart
+docker compose run --rm openvpn easyrsa revoke jack
+docker compose run --rm openvpn easyrsa gen-crl update-db
+docker compose restart
 ```
 
 ## 参考资料
